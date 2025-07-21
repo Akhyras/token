@@ -1,5 +1,9 @@
-import { startStimulusApp } from '@symfony/stimulus-bundle';
+// assets/bootstrap.js
+import { startStimulusApp } from '@symfony/stimulus-bridge';
+import '@symfony/ux-turbo';
+
+// 👇 ceci charge controllers.json via l'alias Webpack
+import controllerMap from '@symfony/stimulus-bridge/controllers.json';
 
 const app = startStimulusApp();
-// register any custom, 3rd party controllers here
-// app.register('some_controller_name', SomeImportedController);
+app.load(controllerMap);

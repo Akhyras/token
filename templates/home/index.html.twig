@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+{% block body %}
+<main style=>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="height: 300px;">
+        <img src="{{ asset('image/image-4.avif') }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption text-start">
+          <div class="container">
+            <h1>Raccourcisseur d'URL</h1>
+            <p>Rendez vos URL lisible !</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Inscivez-vous !</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img loading="lazy" width="320" height="180" src="{{ asset('image/image-1.png') }}" />
+
+        <h2 class="fw-bold">Inflation</h2>
+        <p>En juin 2025, les prix à la consommation augmentent de 0,4 % sur un mois et de 1,0 % sur un an</p>
+
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img loading="lazy" width="320" height="180" src="{{ asset('image/image-2.png') }}" />
+
+        <h2 class="fw-bold">Croissance</h2>
+        <p>Le nombre d’entreprises en forte croissance augmente de 38 % entre 2019 et 2023</p>
+
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+<img loading="lazy" width="320" height="180" src="{{ asset('image/image-3.png') }}" />
+        <h2 class="fw-bold">Social</h2>
+        <p class="text-start">Taux de pauvreté et inégalités s’accroissent fortement</p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+  <section class="col col-lg-10 mx-auto mb-5">
+    <div class="card" id="shortenCard">
+      <div class="card-body bg-light">
+        <form id="shortenForm">
+          <div class="col">
+            <div class="input-group">
+              <input type="text" class="form-control form-control-lg" name="url" id="url" placeholder="Votre adresse à réduire" autocomplete="off" required>
+              <button type="submit" class="btn btn-lg btn-success" id="btnShortenUrl">Réduire l'URL</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; YM</p>
+  </footer>
+</main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('home') }}
+{% endblock %}
